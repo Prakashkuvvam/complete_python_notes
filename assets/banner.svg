@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 400" width="100%" height="auto">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628">
+        <animate attributeName="stop-color" values="#0a1628;#1a1a2e;#0f3460;#0a1628" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#16213e">
+        <animate attributeName="stop-color" values="#16213e;#0f3460;#1a1a2e;#16213e" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#1a1a2e">
+        <animate attributeName="stop-color" values="#1a1a2e;#0a1628;#16213e;#1a1a2e" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Python blue gradient -->
+    <linearGradient id="pythonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#306998"/>
+      <stop offset="100%" stop-color="#1c4c7c"/>
+    </linearGradient>
+
+    <!-- Python yellow gradient -->
+    <linearGradient id="pythonYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD43B"/>
+      <stop offset="100%" stop-color="#f5b700"/>
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.03"/>
+    </pattern>
+
+    <!-- Code particle symbol -->
+    <g id="codeParticle1">
+      <rect x="0" y="0" width="60" height="20" rx="4" fill="#1e293b" opacity="0.6"/>
+      <text x="5" y="14" font-family="monospace" font-size="10" fill="#306998" opacity="0.7">def hello():</text>
+    </g>
+    <g id="codeParticle2">
+      <rect x="0" y="0" width="50" height="20" rx="4" fill="#1e293b" opacity="0.6"/>
+      <text x="5" y="14" font-family="monospace" font-size="10" fill="#FFD43B" opacity="0.7">import pandas</text>
+    </g>
+    <g id="codeParticle3">
+      <rect x="0" y="0" width="45" height="20" rx="4" fill="#1e293b" opacity="0.6"/>
+      <text x="5" y="14" font-family="monospace" font-size="10" fill="#6cc644" opacity="0.7">print("🐍")</text>
+    </g>
+    <g id="codeParticle4">
+      <rect x="0" y="0" width="55" height="20" rx="4" fill="#1e293b" opacity="0.6"/>
+      <text x="5" y="14" font-family="monospace" font-size="10" fill="#e06c75" opacity="0.7">async def run():</text>
+    </g>
+    <g id="codeParticle5">
+      <rect x="0" y="0" width="48" height="20" rx="4" fill="#1e293b" opacity="0.6"/>
+      <text x="5" y="14" font-family="monospace" font-size="10" fill="#61afef" opacity="0.7">import numpy as np</text>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <!-- Floating code particles -->
+  <use href="#codeParticle1" x="80" y="60" opacity="0">
+    <animate attributeName="opacity" values="0;0.7;0" dur="6s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;20,-30;0,0" dur="6s" begin="0s" repeatCount="indefinite"/>
+  </use>
+  <use href="#codeParticle2" x="900" y="100" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="7s" begin="2s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;-15,-25;0,0" dur="7s" begin="2s" repeatCount="indefinite"/>
+  </use>
+  <use href="#codeParticle3" x="150" y="300" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0" dur="8s" begin="4s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;25,-20;0,0" dur="8s" begin="4s" repeatCount="indefinite"/>
+  </use>
+  <use href="#codeParticle4" x="950" y="320" opacity="0">
+    <animate attributeName="opacity" values="0;0.5;0" dur="5s" begin="1s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;-20,-35;0,0" dur="5s" begin="1s" repeatCount="indefinite"/>
+  </use>
+  <use href="#codeParticle5" x="750" y="50" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="7s" begin="3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;15,-20;0,0" dur="7s" begin="3s" repeatCount="indefinite"/>
+  </use>
+
+  <!-- Floating dots / stars -->
+  <circle cx="200" cy="80" r="2" fill="#61afef" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0" dur="4s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="2;3;2" dur="4s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="150" r="1.5" fill="#e06c75" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="5s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="1.5;2.5;1.5" dur="5s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="350" r="2" fill="#56b6c2" opacity="0">
+    <animate attributeName="opacity" values="0;0.7;0" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="2;4;2" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="280" r="1.5" fill="#98c379" opacity="0">
+    <animate attributeName="opacity" values="0;0.5;0" dur="6s" begin="3s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="1.5;3;1.5" dur="6s" begin="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="50" r="2" fill="#d19a66" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" dur="4.5s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated snake/shape path -->
+  <path d="M 0 250 Q 100 200, 200 250 T 400 250 T 600 250 T 800 250 T 1000 250 T 1200 250" fill="none" stroke="#306998" stroke-width="2" opacity="0.15">
+    <animate attributeName="d" 
+      values="M 0 250 Q 100 200, 200 250 T 400 250 T 600 250 T 800 250 T 1000 250 T 1200 250;
+              M 0 200 Q 100 300, 200 200 T 400 300 T 600 200 T 800 300 T 1000 200 T 1200 300;
+              M 0 250 Q 100 200, 200 250 T 400 250 T 600 250 T 800 250 T 1000 250 T 1200 250"
+      dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <path d="M 0 260 Q 150 210, 300 260 T 600 260 T 900 260 T 1200 260" fill="none" stroke="#FFD43B" stroke-width="1.5" opacity="0.1">
+    <animate attributeName="d" 
+      values="M 0 260 Q 150 210, 300 260 T 600 260 T 900 260 T 1200 260;
+              M 0 210 Q 150 310, 300 210 T 600 310 T 900 210 T 1200 310;
+              M 0 260 Q 150 210, 300 260 T 600 260 T 900 260 T 1200 260"
+      dur="6s" begin="0.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Python logo area (left side) -->
+  <g transform="translate(100, 80)">
+    <!-- Outer blue shape (half circles) -->
+    <path d="M 60,0 C 27,0 0,27 0,60 L 0,100 C 0,115 12,125 27,125 L 45,125 C 60,125 72,115 72,100 L 72,90 C 72,80 64,72 54,72 L 18,72 L 18,64 C 18,54 26,46 36,46 L 60,46 C 60,46 72,46 72,46 L 72,28 C 72,13 60,0 45,0 Z" fill="url(#pythonBlue)">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Inner blue (left half) -->
+    <path d="M 60,125 C 93,125 120,98 120,65 L 120,25 C 120,10 108,0 93,0 L 75,0 C 60,0 48,10 48,25 L 48,35 C 48,45 56,53 66,53 L 102,53 L 102,61 C 102,71 94,79 84,79 L 60,79 C 60,79 48,79 48,79 L 48,97 C 48,112 60,125 75,125 Z" fill="url(#pythonYellow)">
+      <animate attributeName="opacity" values="1;0.9;1" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Title text with typing animation -->
+  <g filter="url(#glow)">
+    <!-- Main title -->
+    <text x="280" y="125" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" fill="#ffffff">
+      <tspan fill="#FFD43B">Python</tspan>
+      <tspan fill="#ffffff"> Learning Path</tspan>
+      <animate attributeName="opacity" values="0;1" dur="1.5s" begin="0.3s" fill="freeze"/>
+    </text>
+  </g>
+
+  <!-- Animated cursor (blinking) -->
+  <text x="670" y="125" font-family="monospace" font-size="48" fill="#306998" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle with typing effect -->
+  <text x="280" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="#8892b0" opacity="0">
+    <tspan>From zero to production-ready — learn, revise, and ace your interview</tspan>
+    <animate attributeName="opacity" values="0;1" dur="2s" begin="0.8s" fill="freeze"/>
+  </text>
+
+  <!-- Stats badges row -->
+  <g transform="translate(280, 215)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="1.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="280,230;280,215" dur="0.5s" begin="1.5s" fill="freeze"/>
+
+    <rect x="0" y="0" width="95" height="28" rx="14" fill="#306998"/>
+    <text x="47" y="19" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">18 Chapters</text>
+
+    <rect x="105" y="0" width="95" height="28" rx="14" fill="#6cc644"/>
+    <text x="152" y="19" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">6 Practice Tests</text>
+
+    <rect x="210" y="0" width="100" height="28" rx="14" fill="#e06c75"/>
+    <text x="260" y="19" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">50+ Q&A</text>
+
+    <rect x="320" y="0" width="95" height="28" rx="14" fill="#61afef"/>
+    <text x="367" y="19" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Open Source</text>
+  </g>
+
+  <!-- Pulsing "Start Learning" call to action -->
+  <g transform="translate(280, 275)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="2.2s" fill="freeze"/>
+    <rect x="0" y="0" width="180" height="40" rx="20" fill="none" stroke="#306998" stroke-width="2"/>
+    <rect x="0" y="0" width="180" height="40" rx="20" fill="url(#pythonBlue)" opacity="0.1">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">
+      🚀 Start Learning
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Right side: code illustration -->
+  <g transform="translate(750, 60)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1.5s" begin="1s" fill="freeze"/>
+
+    <!-- Code window frame -->
+    <rect x="0" y="0" width="380" height="260" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="380" height="35" rx="10" fill="#0f172a"/>
+    <rect x="0" y="25" width="380" height="10" fill="#0f172a"/>
+    <!-- Window buttons -->
+    <circle cx="20" cy="17" r="6" fill="#ff5f56"/>
+    <circle cx="40" cy="17" r="6" fill="#ffbd2e"/>
+    <circle cx="60" cy="17" r="6" fill="#27c93f"/>
+    <!-- Title -->
+    <text x="190" y="22" font-family="monospace" font-size="12" fill="#8892b0" text-anchor="middle">main.py</text>
+
+    <!-- Code lines -->
+    <text x="15" y="60" font-family="monospace" font-size="13" fill="#6cc644"> 1  # Python Learning Path</text>
+    <text x="15" y="80" font-family="monospace" font-size="13" fill="#6cc644"> 2  # Master the fundamentals 🐍</text>
+
+    <text x="15" y="105" font-family="monospace" font-size="13" fill="#61afef"> 3  import</text>
+    <text x="82" y="105" font-family="monospace" font-size="13" fill="#e5c07b"> math</text>
+    <text x="15" y="125" font-family="monospace" font-size="13" fill="#61afef"> 4  from</text>
+    <text x="55" y="125" font-family="monospace" font-size="13" fill="#e5c07b"> typing </text>
+    <text x="95" y="125" font-family="monospace" font-size="13" fill="#61afef"> import</text>
+    <text x="145" y="125" font-family="monospace" font-size="13" fill="#e5c07b"> List, Optional</text>
+
+    <text x="15" y="150" font-family="monospace" font-size="13" fill="#abb2bf"> 5</text>
+
+    <text x="15" y="170" font-family="monospace" font-size="13" fill="#6cc644"> 6  </text>
+    <text x="15" y="170" font-family="monospace" font-size="13" fill="#61afef">class</text>
+    <text x="55" y="170" font-family="monospace" font-size="13" fill="#e5c07b"> Student</text>
+    <text x="105" y="170" font-family="monospace" font-size="13" fill="#abb2bf">:</text>
+
+    <text x="30" y="190" font-family="monospace" font-size="13" fill="#61afef"> 7      def</text>
+    <text x="72" y="190" font-family="monospace" font-size="13" fill="#e06c75"> __init__</text>
+    <text x="115" y="190" font-family="monospace" font-size="13" fill="#abb2bf">(self, name: </text>
+    <text x="200" y="190" font-family="monospace" font-size="13" fill="#e5c07b">str</text>
+    <text x="215" y="190" font-family="monospace" font-size="13" fill="#abb2bf">):</text>
+
+    <text x="45" y="210" font-family="monospace" font-size="13" fill="#61afef"> 8          self</text>
+    <text x="82" y="210" font-family="monospace" font-size="13" fill="#abb2bf">.name = name</text>
+
+    <text x="15" y="235" font-family="monospace" font-size="13" fill="#abb2bf"> 9</text>
+    <text x="15" y="255" font-family="monospace" font-size="13" fill="#6cc644">10  </text>
+    <text x="15" y="255" font-family="monospace" font-size="13" fill="#61afef">def</text>
+    <text x="40" y="255" font-family="monospace" font-size="13" fill="#e06c75"> calculate_average</text>
+    <text x="170" y="255" font-family="monospace" font-size="13" fill="#abb2bf">(grades: </text>
+    <text x="230" y="255" font-family="monospace" font-size="13" fill="#e5c07b">List[float]</text>
+    <text x="290" y="255" font-family="monospace" font-size="13" fill="#abb2bf">) -> </text>
+    <text x="310" y="255" font-family="monospace" font-size="13" fill="#e5c07b">float</text>
+    <text x="335" y="255" font-family="monospace" font-size="13" fill="#abb2bf">:</text>
+
+    <!-- Cursor blink on last line -->
+    <rect x="15" y="245" width="8" height="15" fill="#FFD43B" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="300" y="370" width="600" height="3" rx="1.5" fill="#306998" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0" dur="4s" begin="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
